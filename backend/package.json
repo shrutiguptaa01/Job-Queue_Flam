@@ -1,23 +1,16 @@
 {
-  "name": "queuectl-node",
+  "name": "queuectl",
   "version": "1.0.0",
-  "description": "Minimal job queue CLI with MongoDB persistence, retries/backoff, DLQ, workers",
-  "main": "src/index.js",
+  "main": "queuectl.js",
+  "type": "module",
   "bin": {
-    "queuectl": "src/index.js"
+    "queuectl": "./queuectl.js"
   },
-  "scripts": {
-    "start": "node src/index.js",
-    "test-demo": "bash tests/basic_demo.sh"
-  },
-  "author": "",
-  "license": "MIT",
   "dependencies": {
-    "commander": "^10.0.0",
-    "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "mongoose": "^7.8.7",
-    "multer": "^2.0.2",
-    "uuid": "^9.0.0"
+    "axios": "^1.6.0",
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "mongoose": "^7.6.0",
+    "uuid": "^9.0.1"
   }
 }
